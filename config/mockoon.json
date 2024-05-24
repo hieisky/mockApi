@@ -1,0 +1,113 @@
+{
+  "uuid": "3199185a-ff3c-4d79-8500-26371560b5cc",
+  "lastMigration": 32,
+  "name": "Mockoon",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "0e43e6f2-5b11-4c95-934c-f985808cfcaf",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "post",
+      "responses": [
+        {
+          "uuid": "7b12d665-eeed-416d-84c7-ed7f3979d091",
+          "body": "{\n  \"result\": \"post request success\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "cf378003-71d7-4125-b9a5-2853efcb3248",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "get",
+      "responses": [
+        {
+          "uuid": "b073e991-9930-4faa-a112-d5a60dca2761",
+          "body": "{\n  \"result\": \"Get request success\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "0e43e6f2-5b11-4c95-934c-f985808cfcaf"
+    },
+    {
+      "type": "route",
+      "uuid": "cf378003-71d7-4125-b9a5-2853efcb3248"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

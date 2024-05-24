@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  mockoon:
+    image: mockoon/cli:latest
+    container_name: mockoon
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./config/mockoon.json:/data/mockoon.json
+      - ./logs:/logs
+      - ./entrypoint.sh:/usr/local/bin/entrypoint.sh
+    entrypoint: ["/usr/local/bin/entrypoint.sh"]
+    environment:
+      - MOCKOON_CLI_LOG_LEVEL=info
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ngrok
+    depends_on:
+      - mockoon
+    ports:
+      - "4040:4040"  # Port for ngrok web interface
+    volumes:
+      - ./config/ngrok.yaml:/ngrok/ngrok.yaml
+    command: "start --config /ngrok/ngrok.yaml --all"

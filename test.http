@@ -1,0 +1,24 @@
+
+## url will changes every time you start ngrok, so you need to update the url in the collection
+@url=https://33ab-58-153-99-64.ngrok-free.app
+
+@resendId=10
+POST {{url}}/post
+test-api-key: TEST-API-KEY
+test-api-token: TEST-API-TOKEN
+Content-Type: application/json
+Accept: application/json
+
+{
+    "resendId": "{{resendId}}"
+}
+
+###
+
+GET {{url}}/get
+test-api-key: TEST-API-KEY
+test-api-token: TEST-API-TOKEN
+Content-Type: application/json
+Accept: application/json
+
+###
